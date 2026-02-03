@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jet Engine Health Monitor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Engine RUL Predictor</h1>
+        <p>Input current sensor readings to estimate Remaining Useful Life (RUL)</p>
+        
+        <form action="/predict" method="post" class="form-grid">
+            <input type="number" step="any" name="cycle" placeholder="Time Cycles" required>
+            <input type="number" step="any" name="s2" placeholder="Sensor 2 (Temp)" required>
+            <input type="number" step="any" name="s3" placeholder="Sensor 3 (LPT Speed)" required>
+            <input type="number" step="any" name="s4" placeholder="Sensor 4 (HPC Outlet Temp)" required>
+            <input type="number" step="any" name="s7" placeholder="Sensor 7 (P30)" required>
+            <input type="number" step="any" name="s11" placeholder="Sensor 11 (Static P)" required>
+            <input type="number" step="any" name="s12" placeholder="Sensor 12 (Fan Speed)" required>
+            <input type="number" step="any" name="s13" placeholder="Sensor 15 (HPC Inlet P)" required>
+            <input type="number" step="any" name="s14" placeholder="Sensor 15 (HPC Inlet P)" required>
+            <input type="number" step="any" name="s15" placeholder="Sensor 15 (HPC Inlet P)" required>
+            <input type="number" step="any" name="s16" placeholder="Sensor 15 (HPC Inlet P)" required>
+            <input type="number" step="any" name="s17" placeholder="Sensor 15 (HPC Inlet P)" required>
+            <input type="number" step="any" name="s18" placeholder="Sensor 15 (HPC Inlet P)" required>
+            <input type="number" step="any" name="s19" placeholder="Sensor 15 (HPC Inlet P)" required>
+            <input type="number" step="any" name="s20" placeholder="Sensor 15 (HPC Inlet P)" required>
+            <input type="number" step="any" name="setting 1" placeholder="Sensor 15 (HPC Inlet P)" required>
+            <input type="number" step="any" name="setting 2" placeholder="Sensor 15 (HPC Inlet P)" required>
+            <input type="number" step="any" name="setting 3" placeholder="Sensor 15 (HPC Inlet P)" required>
+            <input type="number" step="any" name="time Cycles" placeholder="Sensor 15 (HPC Inlet P)" required>
+            <input type="number" step="any" name="s1" placeholder="Sensor 15 (HPC Inlet P)" required>
+            <input type="number" step="any" name="s15" placeholder="Sensor 15 (HPC Inlet P)" required>
+            
+            <button type="submit" class="btn">Analyze Engine Health</button>
+        </form>
+
+        {% if prediction_text %}
+        <div class="result">
+            <h2>{{ prediction_text }}</h2>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
