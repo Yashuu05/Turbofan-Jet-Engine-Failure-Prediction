@@ -57,11 +57,57 @@
 
 - Third Trial
 
-![](assets/trail_3.png)
+![](assets/trial_3.png)
 
 - Fouth Trial
 
-![](trial_4.png)
+![](assets/trial_4.png)
 
 --- 
 
+## Web Deployment
+
+- The project includes a Flask web application that allows engineers to input current engine telemetry and receive an instant RUL prediction.
+- Backend: Flask API handling model inference and sequence reshaping.
+- Frontend: Responsive HTML5/CSS3 interface with "Glassmorphism" design.
+
+--- 
+
+## Installation & Usage
+
+1. clone repository:
+ 
+`git clone https://github.com/Yashuu05/Turbofan-Jet-Engine-Failure-Prediction.git`
+`cd Turbofan-Jet-Engine-Failure-Prediction`
+
+2. Create Virtual Environment
+
+Powershell : `python -m venv <name>`
+
+3. Activate virtual environment
+
+Powershell : `<name>/Scripts/activate`
+*Note: to deactivate, use `deactivate`*
+
+4. Install dependencies
+ 
+`pip install -r requirements.txt`
+
+5. Run the app
+
+`app.py`
+
+6. Navigate to `http://127.0.0.1:5000` in your browser.
+
+7. Test the App and ML output.
+
+--- 
+
+## Acknowledgments
+- Data provided by NASA Prognostics Center of Excellence.
+- Research based on: Saxena et al., “Damage Propagation Modeling for Aircraft Engine Run-to-Failure Simulation”.
+- Kaggle : making Dataset available easily.
+- Google : Computational resource (GPU, Notebooks)
+- Open source community
+
+--- 
